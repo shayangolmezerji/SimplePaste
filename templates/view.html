@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Paste #{{ paste_id }}</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; max-width: 1000px; margin: 50px auto; padding: 30px; line-height: 1.6; background-color: #f4f7f9; color: #333; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); }
+        h1 { color: #007bff; border-bottom: 2px solid #ced4da; padding-bottom: 10px; margin-bottom: 30px; }
+        pre { background-color: #272822; color: #f8f8f2; padding: 25px; border-radius: 8px; overflow-x: auto; font-family: 'Consolas', monospace; font-size: 15px; white-space: pre-wrap; word-wrap: break-word; line-height: 1.4; }
+        h2 { margin-top: 30px; margin-bottom: 15px; font-size: 1.5em; }
+        .info-box { background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 30px; display: flex; justify-content: space-around; border: 1px solid #eee; }
+        .info-item { text-align: center; padding: 0 20px; }
+        .info-item label { display: block; font-size: 1em; color: #6c757d; font-weight: 500; margin-bottom: 5px; }
+        .info-item strong { display: block; font-size: 1.4em; color: #007bff; font-weight: 700; }
+        a { color: #007bff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        a:hover { color: #0056b3; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Viewing Paste #{{ paste_id }}</h1>
+
+    <div class="info-box">
+        <div class="info-item">
+            <label>Privacy Status</label>
+            <strong>{{ is_private_label }}</strong>
+        </div>
+        <div class="info-item">
+            <label>Expires In</label>
+            <strong>{{ ttl_formatted }}</strong>
+        </div>
+    </div>
+
+    <h2>Content:</h2>
+    <pre><code>{{ content }}</code></pre>
+
+    <p><a href="{{ url_for('create') }}">Create New Paste</a></p>
+</body>
+</html>
+
