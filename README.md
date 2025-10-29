@@ -23,7 +23,7 @@ You'll need **Python 3** and a running **Redis server** for this to work.
 #### 1\. Grab the code
 
 ```bash
-git clone https://github.com/shayangolmezerji/simple-pastebin.git
+git clone https://github.com/shayangolmezerji/SimplePaste.git
 cd simple-pastebin
 ```
 
